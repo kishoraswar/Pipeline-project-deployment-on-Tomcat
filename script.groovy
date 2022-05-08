@@ -31,7 +31,7 @@ pipeline {
             
         stage ('Deploy') {
             steps{
-            deploy adapters: [tomcat9(path: '', url: 'http://localhost:8081/')], contextPath: 'jenkins_calci', onFailure: false, war: '**/*.war'
+            deploy adapters: [tomcat9(path: '', url: 'http://localhost:8084/')], contextPath: 'jenkins_calci', onFailure: false, war: '**/*.war'
              echo "Deploy successful";
             }
         }
