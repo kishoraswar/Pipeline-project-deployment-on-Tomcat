@@ -1,34 +1,34 @@
 pipeline {  
    agent any
    tools {
-        maven 'mvn3.8.6'
+        #maven 'mvn3.8.6'
     }
     stages {  
             stage ('Git-Checkout') {  
                 steps{
                     git 'https://github.com/kishoraswar/Pipeline-project-deployment-on-Tomcat.git'
                     echo "Checkout successful";
-                    sh 'mvn --version'
+                    sh "mvn --version"
                 } 
             }
             stage ('Compile') {  
                   steps{
-                    sh  'mvn compile'
+                    sh  "mvn compile"
                     echo "test successful";
                     
                 } 
             }
             stage ('Build') {  
                   steps{
-                    sh 'mvn clean'
-                    sh 'mvn package'
+                    sh "mvn clean"
+                    sh "mvn package"
                     echo "build successful";
                     
                 } 
             }
              stage ('Test') {  
                   steps{
-                    sh 'mvn test'
+                    sh "mvn test"
                     echo "test successful";
                 } 
             }
