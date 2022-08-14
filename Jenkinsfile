@@ -1,8 +1,6 @@
 pipeline {  
    agent any
-   tools {
-        #maven 'mvn3.8.6'
-    }
+
     stages {  
             stage ('Git-Checkout') {  
                 steps{
