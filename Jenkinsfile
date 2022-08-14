@@ -5,6 +5,7 @@ pipeline {
                 steps{
                     git 'https://github.com/kishoraswar/Pipeline-project-deployment-on-Tomcat.git'
                     echo "Checkout successful";
+                    sh 'mvn --version'
                 } 
             }
             stage ('Compile') {  
